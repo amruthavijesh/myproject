@@ -1,0 +1,25 @@
+{% extends 'app/base.html' %}
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <h1>User Login Form</h1>
+
+</head>
+<body>
+    {% block content %}
+    <div>
+        <form action="{% url 'app:user_login' %}" method=post enctype="multipart/form-data">
+            {% csrf_token %}
+            <table style="border-collapse: separate;">
+                <tr style="border-spacing: 30px;"><td>
+                    {{ form.as_table }}
+                </td>
+                </tr>
+            </table>
+            <input type="submit" name="Login" value="Login" style="width:50px"> 
+        </form>
+    </div>
+    {% endblock %}
+</body>
+</html>
