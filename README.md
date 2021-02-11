@@ -1,1 +1,1 @@
-web hosting
+project hosting
